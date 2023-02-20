@@ -150,12 +150,13 @@ p {
 }
 
 /* Home */
-#home {
+#home { 
   background: url('imgs/home-background.png') center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
 }
+
 
 .home__avatar {
   width: 250px;
