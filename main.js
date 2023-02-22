@@ -26,7 +26,6 @@ navbarMenu.addEventListener('click', (event) => {
   }
   navbarMenu.classList.remove('open');
   scrollIntoView(link);
-  selectNavItem(target);
 });
 
 
@@ -102,10 +101,6 @@ workBtnContainer.addEventListener('click', (e) => {
 
 
 
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: 'smooth'});  
-}
 
 
 
@@ -133,6 +128,15 @@ function selectNavItem(selected) {
   selectedNavItem = selected;
   selectedNavItem.classList('active');
 }
+
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});  
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+
 const observerOptions = {
   root: null,
   rootMargin: '0px',
